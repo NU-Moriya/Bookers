@@ -4,7 +4,7 @@
     <li><%= error %></li>
   <% end %>
 </ul>
-
+<% end %>
 <h1>Books</h1>
 
 <table>
@@ -18,9 +18,9 @@
       <% @books.each do |book| %>
       <td><%= book.title %></td>
       <td><%= book.body %></td>
-      <td><%= link_to 'Show' book_path(book) %></td>
-      <td><%= link_to 'Edit' edit_book_path(book) %></td>
-      <td><%= link_to 'Destroy' books_path method: :delete, "data-confirm" => "Are you sure？" %></td>
+      <td><%= link_to 'Show', book_path(book) %></td>
+      <td><%= link_to 'Edit', edit_book_path(book) %></td>
+      <td><%= link_to 'Destroy', books_path, method: :delete, "data-confirm" => "Are you sure？" %></td>
       <% end %>
     </tr>
   </tbody>
@@ -32,5 +32,5 @@
 <h3>Body</h3>
 <%= f.text_area :body %>
 
-<%= f.submit 'Creat Book' %>
+<%= f.submit "Creat Book" %>
 <% end %>
