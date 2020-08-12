@@ -3,6 +3,7 @@
     <ul>
       <% @book.errors.full_messages.each do |error| %>
         <li><%= error %></li>
+      <%= alert %>
       <% end %>
     </ul>
   </div>
